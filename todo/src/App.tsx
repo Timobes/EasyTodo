@@ -1,8 +1,12 @@
+import { Header } from "./components/Header/Header";
+import { RouterSection } from "./components/RouterSection/RouterSection";
 
 const App = () => {
   return (
     <div className="container">
-      ads
+      <Header />
+      <RouterSection />
+      <footer></footer>
     </div>
   );
 }
