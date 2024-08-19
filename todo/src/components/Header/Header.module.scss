@@ -1,0 +1,49 @@
+$color_1: black;
+$color_2: white;
+
+header {
+    .wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+        .header {
+            section {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                .logo {
+                    position: absolute;
+                    left: 0;
+                    img {
+                        width: 60px;
+                    }
+                }
+                nav {
+                    display: flex;
+                    gap: 20px;
+                    margin: 20px 0 20px 0;
+
+                    .link {
+                        a {
+                            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            text-decoration: none;
+                            font-weight: 500;
+                            font-size: 24px;
+                            padding: 6px 12px;
+                            border-radius: 15px;
+                            color: $color_1;
+                            transition: background-color 0.5s;
+                            &:hover {
+                                color: $color_2;
+                                background-color: $color_1;
+                            }
+                        }
+                        .active {
+                            text-decoration: overline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

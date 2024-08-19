@@ -6,7 +6,7 @@ export const Create = () => {
         <div>
             <input type="text" name="" id="" min-width="400px" min-height="200px"/>
             
-            <button onClick={}>Create</button>
+            <button>Create</button>
         </div>
     </>
 }

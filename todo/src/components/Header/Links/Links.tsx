@@ -1,16 +1,22 @@
-import { NavLink } from "react-router-dom"
-import { ILinks } from "./ILinks"
+import style from "./../Header.module.scss";
+import { NavLink } from "react-router-dom";
+import { ILinks } from "./ILinks";
 
 export const Links = () => {
+  const links: ILinks[] = [
+    { to: "/", name: "MAIN" },
+    { to: "/about_us", name: "ABOUT US" },
+  ];
 
-    const links: ILinks[] = [
-        { to: "/", name: "Main" },
-        { to: "/about_us", name: "About Us" },
-    ];
-
-    return <>
-        <nav>
-            { links.map( (link) => <NavLink to={ link.to }>{ link.name }</NavLink> ) }
-        </nav>
+  return (
+    <>
+      <nav>
+        {links.map((link) => (
+          <div className={ style.link }>
+            <NavLink className={({ isActive }) => (isActive ? style.active : undefined)} to={link.to}>{link.name}</NavLink>
+          </div>
+        ))}
+      </nav>
     </>
-}
+  );
+};
