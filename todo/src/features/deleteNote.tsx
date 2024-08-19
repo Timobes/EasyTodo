@@ -1,5 +1,6 @@
-import { INote } from "../entities/note";
+import { db } from "../entities/db";
 
-export function deleteNote(note: INote) {
-	note.id = -1
+export function deleteNote(id: number) {
+	// db.pop(id)
+
 }
