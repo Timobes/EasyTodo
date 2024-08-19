@@ -1,12 +1,17 @@
+import { useState } from "react"
+import { createNote } from "../../features/createNote"
+
 export const Create = () => {
+    const [text, setText]: any = useState()
     
-    
+    // createNote()
+    console.log(text)
     
     return <>
         <div>
-            <input type="text" name="" id="" min-width="400px" min-height="200px"/>
+            <input type="text" name="" id="" onChange={e => setText(e.target.value)}/>
             
-            <button onClick={}>Create</button>
+            <button onClick={() => createNote(text)}>Create</button>
         </div>
     </>
 }
