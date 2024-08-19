@@ -1,3 +1,4 @@
+import { db } from "../entities/db";
 import { INote } from "../entities/note";
 
 // export function createNote(note: INote): void {
@@ -9,11 +10,13 @@ export function createNote(note: string): void {
 	
 
 	let newNote: INote = {
-		id: 1,
+		id: db.length + 1,
 		name: note,
 		status: false,
 		time: new Date()
 	}
 
 	console.log(newNote)
+
+	db.push(newNote)
 }
