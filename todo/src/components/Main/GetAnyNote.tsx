@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { db } from "../../entities/db"
 
 export const GetAnyNote = () => {
-    const [data, setData]: any = useState([])
+    const [data, setData]: any = useState(db)
     
     useEffect(() => {
         setData(db)    
@@ -15,7 +15,7 @@ export const GetAnyNote = () => {
             data.map((note: any) => (
                 <div key={note.id}>
                     <div>{note.id}</div>
-                    <div>{note.name}</div>
+                    <div>{note.text}</div>
                 </div>
             ))
         }
