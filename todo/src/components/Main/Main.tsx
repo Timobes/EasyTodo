@@ -1,3 +1,4 @@
+import { GetCompleted } from "./GetCompleted"
 import { Create } from "./notes/CreateNote"
 import { GetAnyNote } from "./notes/GetAnyNote"
 
@@ -6,6 +7,7 @@ export const Main = () => {
         <main>
             <Create />
             <GetAnyNote />
+            <GetCompleted />
         </main>
     </>
 }

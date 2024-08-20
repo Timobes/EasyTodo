@@ -46,10 +46,20 @@ export const dbSlice = createSlice({
                     state.splice(num, 1)
                 }
             }
+        },
+
+        complete: (state, action) => {
+            const { id } = action.payload;
+
+            for (let i = 0; i < state.length; i++) {
+                if (state[i].id === id) {
+                    state[i].status = true;
+                }
+            }
         }
     }
 })
 
-export const {create, edit, deletes} = dbSlice.actions
+export const {create, edit, deletes, complete} = dbSlice.actions
 
 export default dbSlice.reducer
