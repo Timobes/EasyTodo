@@ -1,0 +1,27 @@
+$color_1: black;
+$color_2: white;
+
+section {
+    .wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+        .about {
+            margin-top: 90px;
+            width: 100%;
+            background-color: transparent;
+            height: 500px;
+            border-radius: 25px;
+            border: 5px solid $color_1;
+            position: relative;
+
+            h1 {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 44px;
+                cursor: default;
+            }
+        }
+    }
+}
