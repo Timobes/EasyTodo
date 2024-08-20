@@ -1,7 +1,9 @@
-import { deleteNote } from "../../features/deleteNote"
+import { useDispatch } from "react-redux";
+import { deletes } from "../../state/dbSlice";
 
 export const DeleteNote = (id: any) => {
-    const del = () => deleteNote(id.id)
+    const dispatch = useDispatch();
+    const del = () => dispatch(deletes(id.id))
 
     return <>
         <button onClick={del}>Удалить</button>

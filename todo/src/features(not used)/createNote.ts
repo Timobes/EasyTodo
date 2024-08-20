@@ -10,7 +10,6 @@ export function createNote(note: string): void {
 		} else {
 			return last.id + 1
 		}
-		
 	}
 
 	let newNote: INote = {

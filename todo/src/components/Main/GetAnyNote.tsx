@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react"
-import { db } from "../../entities/db"
 import { DeleteNote } from "./DeleteNote"
 import { EditNote } from "./EditNote"
+import { useSelector } from "react-redux"
+import { RootState } from "../../state/store"
 
 export const GetAnyNote = () => {
+    const db = useSelector((state: RootState) => state.db);
     const [data, setData]: any = useState(db)
 
     useEffect(() => {
-        const updatedData = [...db]
-        setData(updatedData);
-    }, [])
+        setData(db);
+    }, [db])
 
     return <>
         {

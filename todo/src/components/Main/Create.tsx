@@ -1,16 +1,16 @@
 import { useState } from "react"
-import { createNote } from "../../features/createNote"
+import { useDispatch} from "react-redux";
+import { create } from "../../state/dbSlice";
 
 export const Create = () => {
     const [text, setText]: any = useState()
-    
-    // createNote()
-    console.log(text)
-    
+
+    const dispatch = useDispatch();
+
     return <>
         <div>
             <input type="text" name="" id="" onChange={e => setText(e.target.value)}/> 
-            <button onClick={() => createNote(text)}>Create</button>
+            <button onClick={() => dispatch(create(text))}>Create</button>
         </div>
     </>
 }

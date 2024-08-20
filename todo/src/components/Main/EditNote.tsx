@@ -1,10 +1,13 @@
 import { useState } from "react"
-import { editNote } from "../../features/editNote"
+import { useDispatch } from "react-redux";
+import { edit } from "../../state/dbSlice";
 
 export const EditNote = (id: any) => {
-    const [text, setText]: any = useState()
+    const dispatch = useDispatch();
 
-    const sub = () => editNote(id.id, text)
+    const [text, setText]: any = useState()
+    // editNote(id.id, text) 
+    const sub = () => dispatch(edit({id: id.id, newName: text}))
 
     return <>
         <div>
