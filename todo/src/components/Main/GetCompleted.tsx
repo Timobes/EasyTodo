@@ -4,25 +4,29 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../state/store";
 
 export const GetCompleted = () => {
-  const comp = useSelector((state: RootState) => state.completed);
-  console.log("comp = ", comp);
-  const [data, setData]: any = useState(comp);
 
-  useEffect(() => {
-    setData(comp);
-  }, [comp]);
+    const db = useSelector((state: RootState) => state.db);
 
-  return (
-    <>
-      <div className={style.complete}>
+    const [data, setData]: any = useState(db)
+
+    useEffect(() => {
+        setData(db)
+    },[db])
+
+    return <>
         <h1>Completed:</h1>
-        {data.map((note: any) => (
-          <div key={note.id}>
-            <div>Id = {note.id}</div>
-            <div>{note.name}</div>
-          </div>
-        ))}
-      </div>
+        {
+            data.map((note: any) => (
+                <div key={note.id}>
+                    {note.status === true && ( 
+                        <>
+                            <div>Id = {note.id}</div>
+                            <div>{note.name}</div>
+                        </>
+                    )}
+
+                </div>
+            ))
+        }
     </>
-  );
 };

@@ -18,12 +18,16 @@ export const GetAnyNote = () => {
             {
                 data.map((note: any) => (
                     <div key={note.id}>
-                        <div>Id = {note.id}</div>
-                        <div>{note.name}</div>
-                        <div>{new Date(note.time).toLocaleString()}</div>
-                        <CompletedNote id={note.id} />
-                        <EditNote id={note.id} />
-                        <DeleteNote id={note.id} />
+                        {note.status === false && ( 
+                            <>
+                                <div>Id = {note.id}</div>
+                                <div>{note.name}</div>
+                                <div>{new Date(note.time).toLocaleString()}</div>
+                                <CompletedNote id={note.id} />
+                                 <EditNote id={note.id} />
+                                <DeleteNote id={note.id} />
+                            </>
+                        )}
                     </div>
                 ))
             }

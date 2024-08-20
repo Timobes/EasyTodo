@@ -49,10 +49,8 @@ export const dbSlice = createSlice({
         },
 
         complete: (state, action) => {
-            const { id } = action.payload;
-
             for (let i = 0; i < state.length; i++) {
-                if (state[i].id === id) {
+                if (state[i].id === action.payload) {
                     state[i].status = true;
                 }
             }
