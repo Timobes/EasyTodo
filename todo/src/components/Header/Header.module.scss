@@ -14,7 +14,8 @@ header {
                 .logo {
                     position: absolute;
                     left: 0%;
-                    animation: animLogo 10s infinite linear;
+                    // Выкл т.к глаза мозолит
+                    // animation: animLogo 10s infinite linear; 
                     transition: all 0.5s;
 
                     img {
@@ -61,7 +62,7 @@ header {
                             }
                         }
                         .active {
-                            text-decoration: overline;
+                            text-decoration: underline;
                         }
                     }
                 }

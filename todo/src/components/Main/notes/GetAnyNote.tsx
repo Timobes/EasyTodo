@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { DeleteNote } from "./DeleteNote"
 import { EditNote } from "./EditNote"
 import { useSelector } from "react-redux"
-import { RootState } from "../../state/store"
+import { RootState } from "../../../state/store"
 
 export const GetAnyNote = () => {
     const db = useSelector((state: RootState) => state.db);

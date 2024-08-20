@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux";
-import { edit } from "../../state/dbSlice";
+import { edit } from "../../../state/dbSlice";
 
 export const EditNote = (id: any) => {
     const dispatch = useDispatch();

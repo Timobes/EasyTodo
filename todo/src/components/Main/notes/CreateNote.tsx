@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch} from "react-redux";
-import { create } from "../../state/dbSlice";
+import { create } from "../../../state/dbSlice";
 
 export const Create = () => {
     const [text, setText]: any = useState()

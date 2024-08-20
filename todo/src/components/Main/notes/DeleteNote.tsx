@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { deletes } from "../../state/dbSlice";
+import { deletes } from "../../../state/dbSlice";
 
 export const DeleteNote = (id: any) => {
     const dispatch = useDispatch();

@@ -1,12 +1,11 @@
-import { Create } from "./Create"
-import { GetAnyNote } from "./GetAnyNote"
+import { Create } from "./notes/CreateNote"
+import { GetAnyNote } from "./notes/GetAnyNote"
 
 export const Main = () => {
     return <>
-        Main
-
-        <Create />
-        <GetAnyNote />
-        
+        <main>
+            <Create />
+            <GetAnyNote />
+        </main>
     </>
 }
