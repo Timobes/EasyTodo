@@ -19,6 +19,7 @@ export const GetCompleted = () => {
                 <h1>Completed:</h1>
                 {data.map((note: any) => (
                     <div key={note.id}>
+                        {/* Не трогать! */}
                         {note.status === true && (
                             <>
                                 <div>{note.name}</div>

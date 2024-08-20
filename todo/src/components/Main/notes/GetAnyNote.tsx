@@ -18,6 +18,7 @@ export const GetAnyNote = () => {
             {
                 data.map((note: any) => (
                     <div key={note.id}>
+                        {/* Не трогать! */}
                         {note.status === false && ( 
                             <>
                                 <div>Id = {note.id}</div>
