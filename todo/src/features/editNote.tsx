@@ -1,6 +1,9 @@
-import { INote } from "../entities/note";
+import { db } from "../entities/db";
 
-export function editNote(note: INote, newName: string): void {
-	note.name = newName
-	// newState(newNote)
+export function editNote(id: number, newName: string) {
+	for (let i = 0; i < db.length; i++) {
+		if(db[i].id === id) {
+			return db[i].name = newName;	
+		} 
+	}
 }
