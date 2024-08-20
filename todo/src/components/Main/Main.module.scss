@@ -30,5 +30,9 @@ main {
             position: absolute;
             top: 50px;
         }
+
+        :hover {
+            cursor: pointer;
+        }
     }
 }

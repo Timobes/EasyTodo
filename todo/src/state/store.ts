@@ -1,11 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
 import dbSlice from './dbSlice'
-import completedSlice from './completedSlice'
 
 export const store = configureStore({
   reducer: {
     db: dbSlice,
-    completed: completedSlice
   },
 })
 

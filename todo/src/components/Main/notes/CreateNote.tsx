@@ -10,7 +10,7 @@ export const Create = () => {
 
     return <>
         <div className={ style.create }>
-            <input type="text" placeholder="Введите название" name="" id="" onChange={e => setText(e.target.value)}/> 
+            <input type="text" placeholder="Введите текст" name="" id="" onChange={e => setText(e.target.value)}/> 
             <button onClick={() => dispatch(create(text))}>Create</button>
         </div>
     </>
