@@ -4,22 +4,26 @@ import { RootState } from "../../state/store";
 
 export const GetCompleted = () => {
     
-    const comp = useSelector((state: RootState) => state.completed);
-    console.log('comp = ',comp)
-    const [data, setData]: any = useState(comp)
+    const db = useSelector((state: RootState) => state.db);
+
+    const [data, setData]: any = useState(db)
 
     useEffect(() => {
-        setData(comp)
-    },[comp])
-
+        setData(db)
+    },[db])
 
     return <>
         <h1>Completed:</h1>
         {
             data.map((note: any) => (
                 <div key={note.id}>
-                    <div>Id = {note.id}</div>
-                    <div>{note.name}</div>
+                    {note.status === true && ( 
+                        <>
+                            <div>Id = {note.id}</div>
+                            <div>{note.name}</div>
+                        </>
+                    )}
+
                 </div>
             ))
         }

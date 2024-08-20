@@ -1,10 +1,15 @@
 import { useDispatch} from "react-redux";
-import { complete } from "../../../state/dbSlice";
+import { complete, deletes } from "../../../state/dbSlice";
 
 export const CompletedNote = (id: any) => {
     const dispatch = useDispatch();
 
+    const sub = () => {
+        dispatch(complete(id.id))
+        // dispatch(deletes(id.id))
+    }
+
     return <>
-        <button onClick={() => dispatch(complete(id.id))}>Выполнить</button>
+        <button onClick={sub}>Выполнить</button>
     </>
 }
