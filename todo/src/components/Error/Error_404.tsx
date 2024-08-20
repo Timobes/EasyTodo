@@ -1,3 +1,4 @@
+import style from "./Error_404.module.scss";
 import { useEffect } from "react"
 
 export const Error_404 = () => {

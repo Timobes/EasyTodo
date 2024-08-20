@@ -1,27 +1,28 @@
-import { useEffect, useState } from "react"
+import style from "./Main.module.scss";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../state/store";
 
 export const GetCompleted = () => {
-    
-    const comp = useSelector((state: RootState) => state.completed);
-    console.log('comp = ',comp)
-    const [data, setData]: any = useState(comp)
+  const comp = useSelector((state: RootState) => state.completed);
+  console.log("comp = ", comp);
+  const [data, setData]: any = useState(comp);
 
-    useEffect(() => {
-        setData(comp)
-    },[comp])
+  useEffect(() => {
+    setData(comp);
+  }, [comp]);
 
-
-    return <>
+  return (
+    <>
+      <div className={style.complete}>
         <h1>Completed:</h1>
-        {
-            data.map((note: any) => (
-                <div key={note.id}>
-                    <div>Id = {note.id}</div>
-                    <div>{note.name}</div>
-                </div>
-            ))
-        }
+        {data.map((note: any) => (
+          <div key={note.id}>
+            <div>Id = {note.id}</div>
+            <div>{note.name}</div>
+          </div>
+        ))}
+      </div>
     </>
-}
+  );
+};

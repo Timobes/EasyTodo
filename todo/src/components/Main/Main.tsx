@@ -1,3 +1,4 @@
+import style from "./Main.module.scss";
 import { GetCompleted } from "./GetCompleted"
 import { Create } from "./notes/CreateNote"
 import { GetAnyNote } from "./notes/GetAnyNote"
